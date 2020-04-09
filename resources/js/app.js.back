@@ -1,0 +1,25 @@
+require('./bootstrap');
+
+window.Vue = require('vue');
+
+Vue.component(
+	'passport-clients',
+	require('./components/passport/Client.vue').default
+);
+
+Vue.component(
+	'passport-authorized-clients',
+	require('./components/passport/AuthorizedClient.vue').default
+);
+
+Vue.component(
+	'passport-personal-access-tokens',
+	require('./components/passport/PersonalAccessTokens.vue').default
+);
+
+const app = new Vue({
+	el: '#app',
+});
+
+
+
